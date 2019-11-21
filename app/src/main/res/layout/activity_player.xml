@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerActivity"
+    android:orientation="vertical"
+    android:background="@color/appThemeDark">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ToggleButton
+            android:id="@+id/toggleBtnSpeak"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_mic_black_24dp"
+            android:text="OFF" />
+
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="324dp"
+            android:src="@drawable/ic_play_circle_filled" />
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="24dp"
+            android:text="Song Title"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30dp"
+                android:progressBackgroundTint="@color/colorLoginBackground" />
+
+            <TextView
+                android:id="@+id/elapsedTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/seekBar"
+                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="-20dp"
+                android:text="0:10"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/remainingTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/seekBar"
+                android:layout_marginLeft="300dp"
+                android:layout_marginBottom="-20dp"
+                android:text="-1:20"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/btnPause"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_pause"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toRightOf="@id/btnPause"
+                android:id="@+id/btnNext"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_next"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_toLeftOf="@id/btnPause"
+                android:id="@+id/btnPrevious"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_previous"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

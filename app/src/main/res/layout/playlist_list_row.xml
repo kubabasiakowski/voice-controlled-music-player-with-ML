@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <TextView
+        android:id="@+id/PlaylistNameInListTextView"
+        android:layout_width="325dp"
+        android:layout_height="47dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/NumberOfTracksTextView"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/PlaylistNameInListTextView"
+        android:layout_marginBottom="-25dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnDeletePlaylist"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="79dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_toEndOf="@+id/PlaylistNameInListTextView"
+        android:layout_toRightOf="@+id/PlaylistNameInListTextView"
+        android:drawableLeft="@drawable/ic_clear"
+        android:textSize="28sp" />
+</RelativeLayout>

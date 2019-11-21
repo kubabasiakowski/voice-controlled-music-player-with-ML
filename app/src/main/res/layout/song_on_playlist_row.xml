@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <TextView
+        android:id="@+id/SongNameOnPlaylist"
+        android:layout_width="325dp"
+        android:layout_height="67dp"
+        android:text="TextView"
+        android:textColor="@android:color/white"
+        android:textSize="26sp" />
+
+    <Button
+        android:id="@+id/btnDeleteSongFromPlaylist"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="77dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_toEndOf="@+id/SongNameOnPlaylist"
+        android:layout_toRightOf="@+id/SongNameOnPlaylist"
+        android:drawableLeft="@drawable/ic_clear"
+        android:textSize="28sp" />
+</RelativeLayout>
